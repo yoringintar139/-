@@ -1,0 +1,10 @@
+name: meal-lookup
+services:
+  api:
+    project: ./api
+    language: py
+    host: containerapp
+  web:
+    project: ./web
+    language: js
+    host: containerapp

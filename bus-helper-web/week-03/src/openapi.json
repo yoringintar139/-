@@ -1,0 +1,29 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "NEIS Open API (stub)", "version": "1.0.0" },
+  "paths": {
+    "/hub/schoolInfo": {
+      "get": {
+        "summary": "학교 정보 조회",
+        "parameters": [
+          {"name": "KEY", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "SCHUL_NM", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {"200": {"description": "OK"}}
+      }
+    },
+    "/hub/mealServiceDietInfo": {
+      "get": {
+        "summary": "급식 식단 정보 조회",
+        "parameters": [
+          {"name": "KEY", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "ATPT_OFCDC_SC_CODE", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "SD_SCHUL_CODE", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "MLSV_FROM_YMD", "in": "query", "required": true, "schema": {"type": "string"}},
+          {"name": "MLSV_TO_YMD", "in": "query", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {"200": {"description": "OK"}}
+      }
+    }
+  }
+}

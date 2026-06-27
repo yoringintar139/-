@@ -1,0 +1,10 @@
+{
+  "schools": [
+    {
+      "school_name": "테스트초등학교",
+      "school_code": "7010057",
+      "edu_office_code": "B10",
+      "address": "서울특별시 종로구"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+upstream api_backend {
+  server ${API_UPSTREAM};
+}
+
+server {
+  listen 8080;
+  server_name _;
+  root /usr/share/nginx/html;
+  index index.html;
+
+  location /api/ {
+    proxy_pass http://api_backend;
+    proxy_set_header Host $proxy_host;
+    proxy_ssl_server_name on;
+  }
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
